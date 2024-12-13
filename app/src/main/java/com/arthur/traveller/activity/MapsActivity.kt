@@ -1,4 +1,4 @@
-package com.arthur.traveller
+package com.arthur.traveller.activity
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -9,11 +9,12 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.arthur.traveller.R
+import com.arthur.traveller.databinding.ActivityMapsBinding
 
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 
-import com.arthur.traveller.databinding.GoogleMapsActivityBinding
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -24,7 +25,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
 
-    private lateinit var binding: GoogleMapsActivityBinding
+    private lateinit var binding: ActivityMapsBinding
 
     private val locationPermissionRequest = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -38,8 +39,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.google_maps_activity)
-        binding = GoogleMapsActivityBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_maps)
+        binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
         if (ContextCompat.checkSelfPermission(
             this,

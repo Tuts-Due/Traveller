@@ -2,4 +2,14 @@
     <string name="app_name">Traveller</string>
     <string name="google_maps_api_key">AIzaSyBm7vLIu4CGaXEQ8849qG3IfxeoIyFduYA</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="Login">Entrar</string>
+    <string name="sing_in">Cadastrar</string>
+    <string name="logout">Deslogar</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
 </resources>
